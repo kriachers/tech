@@ -1,0 +1,140 @@
+button {
+    font-family: 'Inter';
+}
+
+body {
+    font-family: 'Inter';
+}
+
+.dashed {
+    text-decoration: dotted;
+}
+
+h1 {
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 36px;
+    color: $black
+}
+
+h2 {
+    font-family: 'Inter';
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    color: #000000;
+}
+
+.section {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1660px;
+}
+
+
+.container {
+    padding: 68px 130px;
+}
+
+.main-button {
+    background: #4092F1;
+    border-radius: 12px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.main-button:hover {
+    background-color: #3886E1;
+   transition: background-color 0.2s ease-in-out;
+}
+
+.main-button:active {
+    background-color: #2176DA;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.round-button {
+    padding: 14px 39.5px;
+    @include flex-center;
+    cursor: pointer;
+    border: 1px solid #4092F1;
+    border-radius: 12px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    background-color: #fff;
+   color: #4092F1;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.round-button:hover {
+    background-color: #ECEFF8;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.round-button:active {
+    background-color: #DAE8FA;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.flat-button {
+    @include flex-center;
+    cursor: pointer;
+    padding: 14px 24.5px;
+    border-radius: 12px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #4092F1;
+    background-color: #EDF5FE;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.flat-button:hover {
+    background-color: #E2EEFC;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.flat-button:active {
+    background-color: #DAE8FA;
+    transition: background-color 0.2s ease-in-out;
+}
+
+@media (max-width: 1440px) {
+    .container {
+        padding: 48px 108px;
+    }
+}
+
+@media (max-width: 1260px) {
+    .container {
+        padding: 48px 36px;
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+        padding: 56px 24px;
+    }
+
+    h1 {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    h2 {
+        font-size: 14px;
+    }
+
+
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 24px 20px 24px 20px;
+    }
+}

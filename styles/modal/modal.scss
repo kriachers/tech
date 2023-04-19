@@ -1,0 +1,106 @@
+.tech__modal,
+.tech__modal.active {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    align-items: start;
+    gap: 12px;
+    z-index: 2;
+    @include trans;
+}
+
+.tech__modal {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.tech__modal.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modal__bg,
+.modal__bg.active {
+    background: rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+    @include trans;
+}
+
+.modal__bg {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal__bg.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.tech-modal__block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding: 28px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 30px rgba(28, 45, 64, 0.1);
+    border-radius: 24px;
+
+    max-width: 80vw;
+    width: 422px;
+}
+
+.tech-block__descr {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    color: #6A727B;
+}
+
+.tech-block__title {
+    text-align: center;
+}
+
+.tech-block__button {
+    padding-top: 14px;
+    padding-bottom: 14px;
+    background: #EDF5FE;
+    border-radius: 12px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: $blue;
+    display: inline-block;
+    width: 100%;
+    @include trans;
+}
+
+.tech-block__button:hover {
+    background: #E2EEFC;
+    @include trans;
+}
+
+.tech-block__cross {
+    cursor: pointer;
+}
+
+.tech-block__cross {
+    rect {
+        @include trans;
+    }
+}
+
+.tech-block__cross:hover {
+    rect {
+        fill: #E2EEFC;
+        @include trans;
+    }
+}
+

@@ -1,0 +1,197 @@
+.ask__form {
+    padding: 20px 32px;
+    border: 1px solid #4092F1;
+    border-radius: 24px;
+}
+
+.ask-form__header {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.ask-header__title {
+  margin-bottom: 4px;
+}
+
+.ask-header__descr {
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #6A727B;
+}
+
+.ask-form__data {
+    margin-bottom: 28px;
+    display: flex;
+    gap: 12px;
+}
+
+.ask-form__input-wrapper {
+  flex: 1 1 auto;
+}
+
+.ask-data__input {
+    width: 100%;
+  }
+
+  .ask-text__input {
+    margin-bottom: 20px;
+    display: inline-block;
+    width: 100%;
+    height: 132px;
+    vertical-align: top;
+  }
+
+
+  .ask-text__input,
+  .ask-data__input {
+    background-color: #F5F8FA;
+    border-radius: 12px;
+    padding: 14px 16px;
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #6A727B;
+  }
+
+  .ask-text__input:hover,
+  .ask-data__input:hover {
+    background-color: #EFF2F6;
+  }
+
+.ask-data__input--error {
+    position: relative;
+    background-color: #FAF1F1;
+    color: #1A1A1A;
+  }
+
+
+
+.ask-form__input-wrapper--error::before  {
+    position: absolute;
+    content: 'Поле обязательно к заполнению';
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #ED5858;
+    margin-top: 55px;
+}
+
+// CONFIRM
+
+.ask-form__confirm {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.ask-confirm__button {
+    padding: 14px 70px;
+}
+
+// CHECKBOX
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  .checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  .checkmark {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #EDF5FE;
+    border-radius: 4px;
+    @include flex-center;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .checkbox-container:hover input ~ .checkmark {
+    background-color: #E2EEFC;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .checkbox-container input:checked ~ .checkmark {
+    background-color: #DAE8FA;
+    transition: background-color 0.2s ease-in-out;
+  }
+
+  .checkmark__icon {
+    display: none;
+
+  }
+
+  .checkbox-container input:checked  ~ .checkmark
+  {
+    .checkmark__icon {
+        display: block;
+      }
+  } 
+  
+  .checkbox-container__text {
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #6A727B;
+  }
+
+  @media (max-width: 1400px) {
+      .ask__form {
+        padding: 16px 24px;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .ask__form {
+      padding: 16px;
+  }
+}
+
+  @media (max-width: 767px) {
+    .ask-form__data {
+        flex-direction: column;
+        margin-bottom: 8px;
+    }
+
+    .ask-form__input-wrapper--error {
+      margin-bottom: 24px;
+    }
+
+}
+
+@media (max-width: 460px) {
+    .ask-form__data {
+        flex-direction: column;
+        margin-bottom: 8px;
+    }
+
+    .ask-form__confirm {
+        flex-direction: column;
+    }
+}

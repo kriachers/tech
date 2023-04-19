@@ -1,0 +1,350 @@
+.tech__tile {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+      grid-auto-rows: 1fr;
+
+    }
+
+
+
+.tech-tile__item {
+    height: auto;
+    padding: 8px 12px;
+    max-width: 316px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 10px rgba(28, 45, 64, 0.05);
+    border-radius: 16px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 8px;
+
+}
+
+// INFO
+
+.tech-item__info {
+    min-height: 184px;
+    max-height: 184px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 12px;
+}
+
+.tech-info__img {
+    max-height: 184px;
+    align-self: center
+
+
+}
+
+// COMMENT 
+
+.tech-info__comment {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    gap: 4px;
+    display: flex;
+    align-items: center;
+}
+
+.tech-comment__amount {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: $black
+}
+
+// BARCODE
+
+.tech-info__barcode {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: $black;
+    background-color: #fff;
+    padding: 4px 6px;
+}
+
+// TITLE
+
+.tech-item__title {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: $black
+}
+
+// PLATE
+
+.tech-info__plate {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.tech-plate__button {
+    display: flex;
+    align-items: center;
+    padding: 6px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 2px 5px rgba(28, 45, 64, 0.1);
+    border-radius: 7px;
+}
+
+// STICKERS
+
+.tech-item__stickers {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+.tech-stickers__stick {
+    padding: 4px 8px;
+    border-radius: 5px;
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.tech-stickers__stick--percent {
+    background: #FCDF28;
+    color: #FFFFFF;
+}
+
+.tech-stickers__stick--sale {
+    background: #64B847;
+    color: #FFFFFF;
+}
+
+.tech-stickers__stick--hit {
+    background: #EC7B52;
+    color: #FFFFFF;
+}
+
+.tech-stickers__stick--new {
+    background: #4092F1;
+    color: #FFFFFF;
+}
+
+.tech-stickers__stick--instock {
+    background: #F0F7EE;
+    color: #64B847;
+}
+
+.tech-stickers__stick--outofstock {
+    background: #F7EEEE;
+    color: #E16A6A;
+}
+
+// PRICE
+
+.tech-item__prices {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.tech-item__before {
+    display: flex;
+    align-items: center;
+}
+
+.tech-item__prices {
+    margin-bottom: 20px;
+}
+
+.tech-prices__old-price,
+.tech-prices__amount  {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: $dark-grey;
+}
+
+.tech-prices__amount  {
+    margin-right: 12px;
+}
+
+.tech-prices__old-price{
+    text-decoration-line: line-through;
+}
+
+.tech-prices__price {
+    margin-right: 4px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: $black;
+}
+
+
+// BUTTONS 
+
+// AMOUNT
+
+.tech-buttons__amount {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px
+}
+
+.tech-amount__number, 
+.tech-amount__change {
+    background: #FFFFFF;
+    border: 1px solid #ECEFF8;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.tech-amount__change {
+    padding: 12px;
+    @include flex-center;
+}
+
+.tech-amount__change--down:hover {
+    svg {
+        line {
+            stroke: $blue;
+            transition: all ease-in-out 0.3s;
+        }
+    }
+}
+
+.tech-amount__change--down {
+    svg {
+        line {
+            transition: all ease-in-out 0.3s;
+        }
+    }
+}
+
+.tech-amount__change--up:hover {
+    svg {
+        path {
+            fill: $blue;
+            transition: all ease-in-out 0.3s;
+        }
+    } 
+}
+
+.tech-amount__change--up {
+    svg {
+        path {
+            transition: all ease-in-out 0.3s;
+        }
+    } 
+}
+
+
+.tech-amount__number {
+    @include flex-center;
+}
+
+.tech-amount__number {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-family: 'Inter';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+    flex-basis: 100%;
+}
+
+.tech__order--icon {
+    margin-right: 8px;
+}
+
+// MODAL
+
+.tehh-item__modal {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    padding: 6px 8px;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 7px rgba(28, 45, 64, 0.12);
+    border-radius: 5px;
+    @include flex-center;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.tech-modal__title {
+    font-family: 'Manrope';
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+    color: #6A727B;
+}
+
+.tech-modal__icon {
+    min-width: 20px;
+}
+
+.tech-tile__item:hover {
+    .tehh-item__modal {
+        top: 50%;
+
+        opacity: 1;
+        pointer-events: all;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+    }
+}
+
+@media (max-width: 1400px) {
+    .tech__title {
+        margin-bottom: 20px;
+    }
+}
+
+
+@media (max-width: 1024px) {
+    .tech-item__prices {
+        flex-direction: column-reverse;
+        gap: 4px;
+        align-items: baseline;
+    }
+}
+
+@media (max-width: 1024px) {
+    .tech-item__stickers {
+        margin-bottom: 12px;
+    }
+    
+    .tech-stickers__stick {
+        padding: 4px 4px;
+        line-height: 12px;
+    }
+}

@@ -1,0 +1,13 @@
+$black: #1A1A1A;
+$dark-grey: #6A727B;
+$blue: #4092F1;
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin trans {
+    transition: all 0.2s ease-in-out;
+}
