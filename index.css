@@ -328,6 +328,14 @@ h2 {
   box-shadow: 0px 2px 5px rgba(28, 45, 64, 0.1);
   border-radius: 7px;
 }
+.tech-plate__button svg path {
+  transition: all 0.2s ease-in-out;
+}
+
+.tech-plate__button:hover svg path {
+  fill: #4092F1;
+  transition: all 0.2s ease-in-out;
+}
 
 .tech-item__stickers {
   margin-bottom: 20px;
@@ -735,7 +743,7 @@ h2 {
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(calc(-50% + 40px), -50%);
   display: flex;
   align-items: start;
   gap: 12px;
@@ -830,6 +838,32 @@ h2 {
   transition: all 0.2s ease-in-out;
 }
 
+@media (max-width: 762px) {
+  .tech__modal, .tech__modal.active {
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-50%, -50%);
+  }
+  .modal__bg,
+  .modal__bg.active {
+    background: #fff;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+    transition: all 0.2s ease-in-out;
+  }
+  .tech-modal__block {
+    box-shadow: none;
+  }
+  .tech-block__cross {
+    position: fixed;
+    right: 28px;
+    top: 28px;
+  }
+}
 .swiper {
   padding-bottom: 26px;
 }

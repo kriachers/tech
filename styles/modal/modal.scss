@@ -3,7 +3,7 @@
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(calc(-50% + 40px), -50%);
 
     display: flex;
     align-items: start;
@@ -104,3 +104,33 @@
     }
 }
 
+@media (max-width: 762px) {
+
+    .tech__modal, .tech__modal.active {
+        height: 100vh;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        transform: translate(-50%, -50%);
+    }
+
+    .modal__bg,
+    .modal__bg.active {
+        background: #fff;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        z-index: 2;
+        @include trans;
+    }
+
+    .tech-modal__block {
+        box-shadow: none;
+    }
+
+    .tech-block__cross {
+        position: fixed;
+        right: 28px;
+        top: 28px;
+    }
+}
